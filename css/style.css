@@ -1,0 +1,475 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+body {
+  font-family: "Noto Sbarns TC", "微軟正黑體", "Microsoft JhengHei", "Arial", sans-serif;
+}
+
+
+/* * {
+  outline: 1px solid black;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* 表頭無法固定問題 */
+/* header{
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+} */
+/* 無法通用標籤問題 */
+/* h2,h3,p,li,a{
+  line-height: 1.5px;
+} */
+
+.bar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f6f6f6;
+  padding: 8px 5px;
+}
+
+.bar li {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.bar img {
+  display: block;
+  padding-right: 3px;
+}
+
+.bar li a {
+  display: block;
+  display: flex;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.bar li a:hover {
+  font-weight: bold;
+}
+
+.facebook a {
+  color: #4460a0;
+}
+
+.twitter a {
+  color: #03abec;
+}
+
+.facebook {
+  border-right: 2px solid #cccccc;
+}
+
+.head {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head h1 a {
+  display: block;
+  width: 224px;
+  height: 50px;
+  background-image: url(../img/logo.png);
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.head ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head ul a {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00cc99;
+  text-decoration: none;
+  padding: 17px 20px;
+}
+
+.head ul li a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: #00cc99;
+  transition: 0.1s;
+}
+
+.head ul li a:hover::after {
+  width: 100%;
+}
+
+.banner,
+main,
+footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 346px;
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  /* position: relative; 取消*/
+}
+
+.banner h2 {
+  /* position: absolute;
+  top: 87px;
+  z-index: 1;取消*/
+  width: 100%;
+  line-height: 1.5;
+  padding: 32px 22px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+section {
+  margin-top: 62px;
+}
+
+.course {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.course a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 3px 2px #bdbdbd;
+}
+
+.course a:hover {
+  box-shadow: 0 0 15px #00cc99;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.course a:hover h2 {
+  color: #00cc99;
+}
+
+.course li {
+  width: 300px;
+}
+
+.course li img {
+  display: block;
+  width: 100%;
+}
+
+.course li h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.course li p {
+  text-align: justify;
+  padding: 0 20px 20px;
+  line-height: 1.5;
+  letter-spacing: -0.9px;
+}
+
+.course .jquery p {
+  line-height: 1.5;
+  padding: 2px 0 2px 20px;
+}
+
+.course ul {
+  list-style: disc;
+  padding-left: 36px;
+}
+
+.course ul li {
+  width: inherit;
+  line-height: 1.5;
+  border: 0px;
+  box-shadow: none;
+  letter-spacing: -0.9px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.compare table {
+  margin: 28px auto 0;
+  width: 840px;
+}
+
+.compare td,
+th {
+  padding: 10px 24px 14px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.compare tr:hover {
+  background-color: mintcream;
+}
+
+.compare tr:hover .hex {
+  font-weight: bolder;
+}
+
+.compare th {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+
+.hightlight {
+  color: #00dbcb;
+}
+
+.contectUs {
+  background-image: linear-gradient(#00644b, #009872);
+  padding: 32px 20px;
+  color: #fff;
+}
+
+.contectUs h3 {
+  line-height: 1.5;
+}
+
+form {
+  margin-top: 28px;
+  display: flex;
+}
+
+textarea {
+  width: 460px;
+  height: 244px;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.inputarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputarea-1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.inputarea-1 label {
+  padding-bottom: 6px;
+}
+
+.inputarea-1 input {
+  border-radius: 4px;
+  width: 460px;
+  height: 32px;
+  font-size: 16px;
+  padding-left: 10px;
+  border: 0px;
+  margin-bottom: 10px;
+}
+
+.inputarea-2 {
+  align-self: flex-end;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 2px darkkhaki;
+}
+
+.inputarea-2 .btn {
+  width: 70px;
+  height: 32px;
+  background-color: #00CC99;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  margin-left: 36px;
+}
+
+.inputarea-2 .btn:hover {
+  opacity: 0.9;
+
+}
+
+footer {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #e12d80;
+  line-height: 1.5;
+}
